@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DataAccess.Concrete.InMemory;
+using Entities.Concrete.DTOs;
 
 namespace Business.Concrete
 {
@@ -41,6 +42,10 @@ namespace Business.Concrete
             return _carsDal.GetAll();
         }
 
+        public List<CarDetailDto> GetCarDetailDto()
+        {
+            return _carsDal.GetCarDetails();
+        }
 
         public List<Car> GetCarsByBrandId(int brandId)
         {
